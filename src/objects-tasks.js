@@ -141,8 +141,18 @@ function makeImmutable(obj) {
  */
 
 //! 7
-function makeWord(/* lettersObject */) {
-  throw new Error('Not implemented');
+function makeWord(lettersObject) {
+  const resStringLength = [...Object.values(lettersObject)].flat().length;
+
+  const resArr = Array.from({ length: resStringLength });
+
+  Object.entries(lettersObject).forEach(([letter, positions]) => {
+    positions.forEach((pos) => {
+      resArr[pos] = letter;
+    });
+  });
+
+  return resArr.join('');
 }
 
 /**
@@ -159,6 +169,8 @@ function makeWord(/* lettersObject */) {
  *    sellTickets([25, 25, 50]) => true
  *    sellTickets([25, 100]) => false (The seller does not have enough money to give change.)
  */
+
+//! 8
 function sellTickets(/* queue */) {
   throw new Error('Not implemented');
 }
