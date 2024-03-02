@@ -211,8 +211,10 @@ class Rectangle {
  *    [1,2,3]   =>  '[1,2,3]'
  *    { width: 10, height : 20 } => '{"height":10,"width":20}'
  */
-function getJSON(/* obj */) {
-  throw new Error('Not implemented');
+
+//! 10
+function getJSON(obj) {
+  return JSON.stringify(obj);
 }
 
 /**
@@ -226,6 +228,8 @@ function getJSON(/* obj */) {
  *    const r = fromJSON(Circle.prototype, '{"radius":10}');
  *
  */
+
+//! 11
 function fromJSON(/* proto, json */) {
   throw new Error('Not implemented');
 }
