@@ -62,8 +62,14 @@ function mergeObjects(objects) {
  */
 
 //! 3
-function removeProperties(/* obj, keys */) {
-  throw new Error('Not implemented');
+function removeProperties(obj, keys) {
+  const res = { ...obj };
+
+  keys.forEach((key) => {
+    delete res[key];
+  });
+
+  return res;
 }
 
 /**
@@ -78,6 +84,8 @@ function removeProperties(/* obj, keys */) {
  *    compareObjects({a: 1, b: 2}, {a: 1, b: 2}) => true
  *    compareObjects({a: 1, b: 2}, {a: 1, b: 3}) => false
  */
+
+//! 4
 function compareObjects(/* obj1, obj2 */) {
   throw new Error('Not implemented');
 }
