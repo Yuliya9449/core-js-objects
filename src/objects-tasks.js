@@ -230,8 +230,8 @@ function getJSON(obj) {
  */
 
 //! 11
-function fromJSON(/* proto, json */) {
-  throw new Error('Not implemented');
+function fromJSON(proto, json) {
+  return Object.setPrototypeOf(JSON.parse(json), proto);
 }
 
 /**
@@ -260,6 +260,8 @@ function fromJSON(/* proto, json */) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  *    ]
  */
+
+//! 12
 function sortCitiesArray(/* arr */) {
   throw new Error('Not implemented');
 }
