@@ -86,8 +86,8 @@ function removeProperties(obj, keys) {
  */
 
 //! 4
-function compareObjects(/* obj1, obj2 */) {
-  throw new Error('Not implemented');
+function compareObjects(obj1, obj2) {
+  return JSON.stringify(obj1) === JSON.stringify(obj2);
 }
 
 /**
@@ -101,6 +101,8 @@ function compareObjects(/* obj1, obj2 */) {
  *    isEmptyObject({}) => true
  *    isEmptyObject({a: 1}) => false
  */
+
+//! 5
 function isEmptyObject(/* obj */) {
   throw new Error('Not implemented');
 }
