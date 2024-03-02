@@ -262,8 +262,10 @@ function fromJSON(proto, json) {
  */
 
 //! 12
-function sortCitiesArray(/* arr */) {
-  throw new Error('Not implemented');
+function sortCitiesArray(arr) {
+  return arr.sort(
+    (a, b) => a.country.localeCompare(b.country) || a.city.localeCompare(b.city)
+  );
 }
 
 /**
@@ -296,6 +298,8 @@ function sortCitiesArray(/* arr */) {
  *    "Poland" => ["Lodz"]
  *   }
  */
+
+//! 13
 function group(/* array, keySelector, valueSelector */) {
   throw new Error('Not implemented');
 }
