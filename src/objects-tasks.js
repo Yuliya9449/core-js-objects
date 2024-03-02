@@ -103,8 +103,8 @@ function compareObjects(obj1, obj2) {
  */
 
 //! 5
-function isEmptyObject(/* obj */) {
-  throw new Error('Not implemented');
+function isEmptyObject(obj) {
+  return !Object.keys(obj).length;
 }
 
 /**
@@ -123,6 +123,8 @@ function isEmptyObject(/* obj */) {
  *    immutableObj.newProp = 'new';
  *    console.log(immutableObj) => {a: 1, b: 2}
  */
+
+//! 6
 function makeImmutable(/* obj */) {
   throw new Error('Not implemented');
 }
